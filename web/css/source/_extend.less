@@ -1,0 +1,59 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//  Default = secondary button
+@button__background: @color-dark-green1;
+@button__border: 1px solid @color-dark-green1;
+@button__hover__color: @color-white;
+@button__hover__background: darken(@button__background, 5%);
+@button__active__background: @color-dark-green1;
+
+//  Primary button
+@button-primary__color: @color-white;
+@button-primary__background: @button__background;
+@button-primary__border: @button__border;
+@button-primary__hover__color: @button__hover__color;
+@button-primary__hover__background: darken(@button__background, 5%);
+@button-primary__hover__border: 1px solid @button__background;
+
+//  Focus
+@focus__color: @color-dark-green1;
+
+& when (@media-common = true) {
+    .logo {
+        float: right;
+    }
+
+    .minicart-wrapper {
+        float: left;
+        .block-minicart {
+            left: 0;
+            right: auto;
+            margin-top: 5px;
+            &::after {
+                right: auto;
+                left: 5px;
+            }
+            &::before {
+                right: auto;
+                left: 6px;
+            }
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .block-search {
+        float: left;
+    }
+
+    .minicart-wrapper {
+        margin-left: 0;
+    }
+}
