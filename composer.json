@@ -1,5 +1,5 @@
 {
-    "name": "csvikram/theme-frontend-luma-child",
+    "name": "csvikram/luma-child",
     "description": "Luma child theme",
     "config": {
         "sort-packages": true
