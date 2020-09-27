@@ -18,13 +18,16 @@
 @button-primary__hover__background: darken(@button__background, 5%);
 @button-primary__hover__border: 1px solid @button__background;
 
-
-//  Replace blue color with green
-@color-blue2: @color-dark-green1;
-
 & when (@media-common = true) {
     .logo {
         float: right;
+    }
+
+    .action.primary {
+        &:focus, &:active {
+            background: @button__hover__background;
+            border: 1px solid @button__hover__background;
+        }
     }
 
     .minicart-wrapper {
